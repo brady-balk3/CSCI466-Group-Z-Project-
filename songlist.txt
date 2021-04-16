@@ -6,10 +6,10 @@
 	Contribs: Daniel Nigro and Olivia Rodrigo (Writers) Daniel Nigro (Producer)
 3. Title: Levitating 
 	Artist: Dua Lipa ft DaBaby
-	Contribs: Clarence Bernard Coffee, Sarah Theresa Hudson, Stephen Noel Kozmeniuk, and Dua Lipa (Writers) KOZ, Stuart Price(Producers)
+	Contribs: DaBaby(vocals) Clarence Bernard Coffee, Sarah Theresa Hudson, Stephen Noel Kozmeniuk, and Dua Lipa (Writers) KOZ, Stuart Price(Producers)
 4. Title: Blinding Lights
 	Artist: The Weeknd
-	Contribs: Max Martin, Abel Tesfaye, Jason Quenneville, Oscar Holter, and Ahmad Balshe (Writers) Max Martin, Oscar Holter, The Weeknd(Producers)
+	Contribs: Max Martin, The Weeknd, Jason Quenneville, Oscar Holter, and Ahmad Balshe (Writers) Max Martin, Oscar Holter, The Weeknd(Producers)
 5. Title: Astronaut in the Ocean
 	Artist: Masked Wolf
 	Contribs: Harry Michael, Tyron Hapi(Writers) Tyron Hapi(Producers)
@@ -18,10 +18,10 @@
 	Contribs: Bashar Jackson, Elgin Lumpkin, Tashim Zene, Troy Oliver (Writers) IamTash(Producer)
 7. Title: Mood
 	Artist: 24kGoldn feat iann dior
-	Contribs: Blake Slatkin, Omer Fedi, Golden Landis Von JOnes, Keegan Bach, Michael Olmo(Writers) KBeaZy, Blake Slatkin, Omer Fedi(Producers)
+	Contribs: iann dior(vocals) Blake Slatkin, Omer Fedi, Golden Landis Von Jones, Keegan Bach, Michael Olmo(Writers) KBeaZy, Blake Slatkin, Omer Fedi(Producers)
 8. Title: What's Next
 	Artist: Drake
-	Contribs: Aubrey Graham, Jonathan Demario Priester, Maneesh Bidaye(W) Supah Mario, Maneesh(P)
+	Contribs: Drake, Jonathan Demario Priester, Maneesh Bidaye(W) Supah Mario, Maneesh(P)
 9. Title: Without You
 	Artist: The Kid LAROI
 	Contribs: Billy Walsh, Blake Slatkin, Omer Fedi, Charlton Howard(W) Omer Fedi, Blake Slatkin(P)
@@ -30,7 +30,7 @@
 	Contribs: Darien Hinton, Levi de Jong(W) Woodpecker(P)
 11. Title: Goosebumps
 	Artist: Travis Scott
-	Contribs: Kevin Gomringer, Time Gomringer, Brock Korsan, Daveon Jackson, Jacques Webster, Kendrick Duckworth, Ronald LaTour(W) Cardo, CuBeatz, YeX(P)
+	Contribs: Kevin Gomringer, Tim Gomringer, Brock Korsan, Daveon Jackson, Jacques Webster, Kendrick Duckworth, Ronald LaTour(W) Cardo, CuBeatz, YeX(P)
 12. Title: Whoopty
 	Artist: CJ
 	Contribs: Charalambos Antoniou, Christopher Daniel Soriano, Mithoon(W) Pxcoyo(P)
@@ -60,7 +60,7 @@
 	Contribs: Jarad Higgins, Nick Mira(W) Nick Mira(P)
 21. Title: No Role Modelz
 	Artist: J. Cole
-	Contribs: Brandt Jones, Danell Stevens, Darius Barnes, Earl Stevens, Jermaine Cole, Jordan Houston, Marvin Whitemon, Paul Beauregard, Tenina Stevens(W) J. Cole, Darius Barnes(P)
+	Contribs: Brandt Jones, Danell Stevens, Darius Barnes, Earl Stevens, J. Cole, Jordan Houston, Marvin Whitemon, Paul Beauregard, Tenina Stevens(W) J. Cole, Darius Barnes(P)
 22. Title: Nikki
 	Artist: Logic
 	Contribs: Arjun Ivatury, Narada Michael Walden, Sir Robert Bryson Hall II(W) Logic, 6ix(P)
@@ -69,7 +69,7 @@
 	Contribs: Ludwig Goransson, Donald Glover (W)
 24. Title: Fire Squad
 	Artist: J. Cole
-	Contribs: Brion Unger, Jermaine Cole, Manzel Bush, Mark Farner(W) J. Cole, Vinylz(P)
+	Contribs: Brion Unger, J. Cole, Manzel Bush, Mark Farner(W) J. Cole, Vinylz(P)
 25. Title: Neighbors
 	Artist: J. Cole
 	Contribs: Anthony Parrino, J. Cole, Ronnie Foster(W) J.Cole(P)
