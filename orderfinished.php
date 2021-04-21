@@ -18,4 +18,44 @@
 	{
 		echo "Connection to database failed: " . $e->getMessage();
 	}
+
+echo "<html>";
+	echo "<head>";
+		echo "<title>Order Complete</title>";
+	echo "</head>";
+	echo "<head>";
+		echo "<h1 style='text-align:center'>Song Order Complete</h1>";
+		echo "<h3 style='text-align:center'>Your Submission Is Now In The Respective Queue</h3>";
+	echo "</head>";
+
+
+
+
+
+echo "<br><a href='djview.php'>DJ VIEW</a>";
+echo "<br><a href='homepage.php'>Search For More Songs!</a>";
+
+
+echo "</html>";
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 ?>
