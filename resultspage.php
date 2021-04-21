@@ -23,7 +23,14 @@
 			echo "<tr>";
 			foreach($row as $key => $value)
 			{
-				echo "<td>$value</td>";
+				echo "<td>";
+				if ($key == "Name")
+				{
+					echo "<form method='POST' action='submit.php'>";
+						echo "<button type='submit' name='fileID' value='$value'>Select</button>";
+					echo "</form>";
+				}
+				echo "$value</td>";
 			}
 			echo "</tr>";
 		}
@@ -32,7 +39,7 @@
 
 		try //connects to database
 	{
-		$dsn = "mysql:host=courses;dbname=z1905404";
+		$dsn = "mysql:host=courses;dbname=$username";
 		$pdo = new PDO($dsn, $username, $password);
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 		
