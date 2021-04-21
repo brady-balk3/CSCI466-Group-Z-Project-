@@ -1,5 +1,6 @@
 -- Group Z
--- Z1905404, 
+-- Brady Balk, Joshua Bosse
+-- Z1905404, Z1878186 
 -- CSCI466
 
 -- Drop table statements to reset database after it has been ran
@@ -18,7 +19,7 @@ CREATE TABLE Artist(ArtistID int NOT NULL AUTO_INCREMENT, Name varchar(100), PRI
 CREATE TABLE User(UserID int NOT NULL AUTO_INCREMENT, Name varchar(100), PRIMARY KEY(UserID));
 CREATE TABLE Contributor(ConID int NOT NULL AUTO_INCREMENT, Name varchar(100), PRIMARY KEY(ConID));
 CREATE TABLE Title(TitleID int NOT NULL AUTO_INCREMENT, Name varchar(100), PRIMARY KEY(TitleID));
-CREATE TABLE KaraokeFile(FileID int NOT NULL AUTO_INCREMENT, Version int NOT NULL, ArtistID int, TitleID int, PRIMARY KEY(FileID), FOREIGN KEY(ArtistID) REFERENCES Artist(ArtistID), FOREIGN KEY(TitleID) REFERENCES Title(TitleID));
+CREATE TABLE KaraokeFile(FileID int NOT NULL AUTO_INCREMENT, Version int NOT NULL, ArtistID int, TitleID int, ConID int, PRIMARY KEY(FileID), FOREIGN KEY(ArtistID) REFERENCES Artist(ArtistID), FOREIGN KEY(TitleID) REFERENCES Title(TitleID), FOREIGN KEY(ConID) REFERENCES Contributor(ConID));
 CREATE TABLE Contributes(Position varchar(100) NOT NULL, ConID int, FileID int, PRIMARY KEY(ConID, FileID), FOREIGN KEY(ConID) REFERENCES Contributor(ConID), FOREIGN KEY(FileID) REFERENCES KaraokeFile(FileID));
 CREATE TABLE FQ(FQID int NOT NULL AUTO_INCREMENT, UserID int, FileID int, Time TIME, Playing BOOLEAN, PRIMARY KEY(FQID), FOREIGN KEY(UserID) REFERENCES User(UserID), FOREIGN KEY(FileID) REFERENCES KaraokeFile(FileID));
 CREATE TABLE PQ(PQID int NOT NULL AUTO_INCREMENT, UserID int, FileID int, Time TIME, Playing BOOLEAN, Price DOUBLE, PRIMARY KEY(PQID), FOREIGN KEY(UserID) REFERENCES User(UserID), FOREIGN KEY(FileID) REFERENCES KaraokeFile(FileID));

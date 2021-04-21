@@ -1,5 +1,6 @@
 -- Group Z
--- Z1905404,
+-- Brady Balk, Joshua Bosse
+-- Z1905404, Z1878186
 -- CSCI466
 
 -- insertion of artist name data
@@ -212,42 +213,42 @@ INSERT INTO Title (Name) VALUES ("Black Rover");
 INSERT INTO Title (Name) VALUES ("Shinzou wo Sasageyo");
 
 -- insertion of karaoke file data
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (1,1,1);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (1,1,2);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (2,2,1);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (3,3,1);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (4,4,1);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (4,4,2);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (5,5,1);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (6,6,1);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (6,6,2);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (7,7,1);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (8,8,1);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (9,9,1);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (10,10,1);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (10,10,2);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (11,11,1);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (12,12,1);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (13,13,1);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (14,14,1);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (15,15,1);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (16,16,1);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (17,17,1);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (17,17,2);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (18,18,1);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (19,19,1);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (20,20,1);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (21,21,1);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (18,22,1);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (22,23,1);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (21,24,1);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (21,25,1);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (18,26,1);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (23,27,1);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (24,28,1);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (25,29,1);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (26,30,1);
-INSERT INTO KaraokeFile (ArtistID, TitleID, Version) VALUES (26,30,2);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (1,1,1,1);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (1,1,2,1);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (2,2,1,7);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (3,3,1,9);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (4,4,1,16);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (4,4,2,16);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (5,5,1,21);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (6,6,1,23);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (6,6,2,23);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (7,7,1,28);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (8,8,1,34);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (9,9,1,38);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (10,10,1,40);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (10,10,2,40);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (11,11,1,43);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (12,12,1,53);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (13,13,1,57);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (14,14,1,65);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (15,15,1,69);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (16,16,1,75);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (17,17,1,79);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (17,17,2,79);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (18,18,1,86);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (19,19,1,74);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (20,20,1,97);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (21,21,1,99);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (18,22,1,108);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (22,23,1,110);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (21,24,1,112);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (21,25,1,116);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (18,26,1,118);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (23,27,1,132);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (24,28,1,133);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (25,29,1,134);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (26,30,1,135);
+INSERT INTO KaraokeFile (ArtistID, TitleID, Version, ConID) VALUES (26,30,2,135);
 
 
 --insertion of contributes data

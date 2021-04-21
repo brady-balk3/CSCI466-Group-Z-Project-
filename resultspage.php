@@ -1,6 +1,6 @@
 <?php
-	//Brady Balk,
-	//Z1905404,
+	//Brady Balk, Joshoua Bosse
+	//Z1905404, Z1878186
 	//CSCI466 Group Project
 	
 	
