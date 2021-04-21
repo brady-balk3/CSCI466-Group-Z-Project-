@@ -10,7 +10,7 @@
 	
 	try //connects to database
 	{
-		$dsn = "mysql:host=courses;dbname=z1905404";
+		$dsn = "mysql:host=courses;dbname=$username";
 		$pdo = new PDO($dsn, $username, $password);
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 	}
@@ -31,7 +31,7 @@
 		<h1 style="text-align:center">Karaoke Search</h1>
 		<form method="POST" action="resultspage.php">
 			<br></br>
-			<input type="radio" id="title" name="searchOPT" value="title"/>
+			<input type="radio" id="title" name="searchOPT" value="title" checked="checked"/>
 			<label for="title">Song Title</label>
 			<input type="radio" id="artist" name="searchOPT" value="artist"/>
 			<label for="title">Artist</label>
