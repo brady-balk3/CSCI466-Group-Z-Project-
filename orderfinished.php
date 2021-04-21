@@ -10,7 +10,7 @@
 	
 		try //connects to database
 	{
-		$dsn = "mysql:host=courses;dbname=z1905404";
+		$dsn = "mysql:host=courses;dbname=$username";
 		$pdo = new PDO($dsn, $username, $password);
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 	}
@@ -27,7 +27,48 @@ echo "<html>";
 		echo "<h1 style='text-align:center'>Song Order Complete</h1>";
 		echo "<h3 style='text-align:center'>Your Submission Is Now In The Respective Queue</h3>";
 	echo "</head>";
-
+	
+	//add to paid queue based on submission from results.
+	if((isset($_POST['PaidQueue']) ? $_POST['PaidQueue']:null))
+	{
+		//insert user name into user table
+		$sql = "INSERT INTO User(Name) VALUES(:Name);";
+		$prepared = $pdo->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
+		$success = $prepared->execute(array(':Name' => $_POST['Name']));
+		$newpid = $success->fetch(PDO::FETCH_BOTH);
+		if($newpid)
+		{
+			$pid = $newpid[UserID];
+		}
+		
+		//insert into paid queue 
+		$t = time();
+		$sql = "INSERT INTO PQ(UserID, FileID, Time, Playing, Price) VALUES(:UserID, :FileID, :Time, FALSE, :Price);";
+		$prepared = $pdo->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
+		$success = $prepared->execute(array(':UserID' => $pid, ':FileID' => $_POST['KaraokeFile'], ':Time' => $t, ':Price' => $_POST['Price']));
+		echo "<br></br>";
+		echo "<p>Your song has succesfully been added to the paid queue, or PQ!</p";
+	}
+	else
+	{
+		//insert user name into user table
+		$sql = "INSERT INTO User(Name) VALUES(:Name);";
+		$prepared = $pdo->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
+		$success = $prepared->execute(array(':Name' => $_POST['Name']));
+		$newfid = $success->fetch(PDO::FETCH_BOTH);
+		if($newfid)
+		{
+			$fid = $newfid[UserID];
+		}
+		
+		//insert into paid queue 
+		$t = time();
+		$sql = "INSERT INTO FQ(UserID, FileID, Time, Playing) VALUES(:UserID, :FileID, :Time, FALSE,);";
+		$prepared = $pdo->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
+		$success = $prepared->execute(array(':UserID' => $fid, ':FileID' => $_POST['KaraokeFile'], ':Time' => $t));
+		echo "<br></br>";
+		echo "<p>Your song has succesfully been added to the free queue, or FQ!</p";
+	}
 
 
 

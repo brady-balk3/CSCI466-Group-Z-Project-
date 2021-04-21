@@ -10,7 +10,7 @@
 	
 		try //connects to database
 	{
-		$dsn = "mysql:host=courses;dbname=z1905404";
+		$dsn = "mysql:host=courses;dbname=$username";
 		$pdo = new PDO($dsn, $username, $password);
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 	}
