@@ -115,5 +115,7 @@ echo "<html>";
 		echo "<input type='submit' id='ClearPQ' name='ClearPQ' value='ClearPQ Selection' form='PQDJ'/>&emsp;";
 		echo "<input type='submit' id='ClearFQ' name='ClearFQ' value='ClearFQ Selection' form='FQDJ'/>";
 	
+	
+		echo "<br><a href='homepage.php'>Go Back To Homepage</a>";
 		echo "</html>";
 ?>	  					
