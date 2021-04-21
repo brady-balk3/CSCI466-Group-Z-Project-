@@ -41,4 +41,6 @@
 		</form>
 	</div>
 	</head>
+	
+	<br><a href="djview.php">DJ VIEW</a>
 </html>
