@@ -12,6 +12,8 @@
 		if (!$rows) {echo "ERROR: Invalid Entry"; die();}
 		echo "<table border=1 cellpadding=10>";
 		echo "<tr>";
+		echo "<th>Confirm</th>";
+
 		foreach ($rows[0] as $key => $value)
 		{
 			if ($key != "FileID")
@@ -55,14 +57,13 @@
 			{
 				if ($key != "FileID")
 				{
-					echo "<td>";
 					if ($key == "Title")
 					{// add option to select a song
-						echo "<form method='POST' action='submit.php'>";
-						echo "<button type='submit' name='FileID' value='$row[FileID]'>Select</button>";
-						echo "</form>";
+						echo "<td> <form method='POST' action='submit.php'>";
+							echo "<button type='submit' name='FileID' value='$row[FileID]'>Select</button>";
+						echo "</form></td>";
 					}
-					echo "$value</td>";
+					echo "<td>$value</td>";
 				}
 			}
 			echo "</tr>";
