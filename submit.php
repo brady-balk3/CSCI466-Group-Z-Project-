@@ -46,11 +46,19 @@
 		}
 		echo "</ol>";
 		
-		// user entry form
+		// user entry form for paid queue
 	echo 	"<form method='POST' action='orderfinished.php'>
 				<input type='hidden' name='KaraokeFile' value='$_POST[FileID]'/>
 				<input type='text' name='Name' placeholder='Please enter your name' required='required'/>
 				<input type='number' name='PaidQueue'  min='0' step='0.01' placeholder='Priority Payment (Optional)'/>
+				<button type='submit'>Submit</button>
+			</form>";
+			
+		//user entry form for free queue
+		echo 	"<form method='POST' action='orderfinished.php'>
+				<input type='hidden' name='KaraokeFile' value='$_POST[FileID]'/>
+				<input type='text' name='Name' placeholder='Please enter your name' required='required'/>
+				<input type='number' name='FreeQueue'  min='0' step='0.01' placeholder='FreeQueue'/>
 				<button type='submit'>Submit</button>
 			</form>";
 	}

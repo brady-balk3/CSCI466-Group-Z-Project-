@@ -32,19 +32,18 @@ echo "<html>";
 	if((isset($_POST['PaidQueue']) ? $_POST['PaidQueue']:null))
 	{
 		//insert user name into user table
-		$pqname = 
 		$sql = "INSERT INTO User(Name) VALUES(:Name);";
 		$prepared = $pdo->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
 		$success = $prepared->execute(array(':Name' => $_POST['Name']));
 		
+		$pqname = $_POST['Name'];
 		
-		$pquid = "SELECT MAX(UserID) FROM User;";
+		$pquid = "SELECT UserID FROM User WHERE Name = '$pqname';";
 		$result = $pdo->query($pquid);
 		$rs = $result->fetch(PDO::FETCH_BOTH);
 		
 		$newpid = $rs[0];
 		
-		print $newpid;
 		
 		//insert into paid queue 
 		$t = time();
@@ -60,17 +59,20 @@ echo "<html>";
 		$sql = "INSERT INTO User(Name) VALUES(:Name);";
 		$prepared = $pdo->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
 		$success = $prepared->execute(array(':Name' => $_POST['Name']));
-		$newfid = $success->fetch(PDO::FETCH_BOTH);
-		if($newfid)
-		{
-			$fid = $newfid[UserID];
-		}
+	
+		$fqname = $_POST['Name'];
 		
-		//insert into paid queue 
+		$fquid = "SELECT UserID FROM User WHERE Name = '$fqname';";
+		$result = $pdo->query($fquid);
+		$rs = $result->fetch(PDO::FETCH_BOTH);
+		
+		$newfid = $rs[0];
+		
+		//insert into free queue 
 		$t = time();
 		$sql = "INSERT INTO FQ(UserID, FileID, Time, Playing) VALUES(:UserID, :FileID, :Time, FALSE);";
 		$prepared = $pdo->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
-		$success = $prepared->execute(array(':UserID' => $fid, ':FileID' => $_POST['KaraokeFile'], ':Time' => $t));
+		$success = $prepared->execute(array(':UserID' => $newfid, ':FileID' => $_POST['KaraokeFile'], ':Time' => $t));
 		echo "<br></br>";
 		echo "<p>Your song has succesfully been added to the free queue, or FQ!</p";
 	}
