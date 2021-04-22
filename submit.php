@@ -48,7 +48,7 @@
 		
 		// user entry form
 	echo 	"<form method='POST' action='orderfinished.php'>
-				<input type='hidden' name='FileID' value='$_POST[FileID]'/>
+				<input type='hidden' name='KaraokeFile' value='$_POST[FileID]'/>
 				<input type='text' name='Name' placeholder='Please enter your name' required='required'/>
 				<input type='number' name='PaidQueue'  min='0' step='0.01' placeholder='Priority Payment (Optional)'/>
 				<button type='submit'>Submit</button>
