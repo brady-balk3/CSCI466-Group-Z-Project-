@@ -46,6 +46,8 @@
 		}
 		echo "</ol>";
 		
+		
+		echo "<h4>Paid Queue Submission</h4>";
 		// user entry form for paid queue
 	echo 	"<form method='POST' action='orderfinished.php'>
 				<input type='hidden' name='KaraokeFile' value='$_POST[FileID]'/>
@@ -54,11 +56,11 @@
 				<button type='submit'>Submit</button>
 			</form>";
 			
+		echo "<h4>Free Queue Submission</h4>";
 		//user entry form for free queue
 		echo 	"<form method='POST' action='orderfinished.php'>
 				<input type='hidden' name='KaraokeFile' value='$_POST[FileID]'/>
-				<input type='text' name='Name' placeholder='Please enter your name' required='required'/>
-				<input type='number' name='FreeQueue'  min='0' step='0.01' placeholder='FreeQueue'/>
+				<input type='text' name='FreeQueue' placeholder='Please enter your name' required='required'/>
 				<button type='submit'>Submit</button>
 			</form>";
 	}

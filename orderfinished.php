@@ -58,9 +58,9 @@ echo "<html>";
 		//insert user name into user table
 		$sql = "INSERT INTO User(Name) VALUES(:Name);";
 		$prepared = $pdo->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
-		$success = $prepared->execute(array(':Name' => $_POST['Name']));
+		$success = $prepared->execute(array(':Name' => $_POST['FreeQueue']));
 	
-		$fqname = $_POST['Name'];
+		$fqname = $_POST['FreeQueue'];
 		
 		$fquid = "SELECT UserID FROM User WHERE Name = '$fqname';";
 		$result = $pdo->query($fquid);
@@ -76,7 +76,8 @@ echo "<html>";
 		echo "<br></br>";
 		echo "<p>Your song has succesfully been added to the free queue, or FQ!</p";
 	}
-
+	
+echo "<br></br>";
 
 
 
@@ -85,25 +86,5 @@ echo "<br><a href='homepage.php'>Search For More Songs!</a>";
 
 
 echo "</html>";
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 ?>
