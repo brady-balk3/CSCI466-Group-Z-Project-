@@ -15,7 +15,36 @@
 		foreach ($rows[0] as $key => $value)
 		{
 			if ($key != "FileID")
-				echo "<th>$key</th>";
+				// sort songs by title
+				echo "<th>$key";
+				if ($key == "Title")
+				{
+					// check if sorted, then alternate value
+					if (isset($_POST['sort']))
+					{
+						
+						if ($_POST['sort'] == "ASC")
+						{
+							echo " (Ascending Order)";
+							$sort = "DESC";
+						}
+						else
+						{
+							echo " (Descending Order)";
+							$sort = "ASC";
+						}
+					}
+					else
+						$sort = "ASC";
+						
+					// form to re-run query in order
+					echo "<form method='POST' action='resultspage.php'>";
+						echo "<input type='hidden' name='search' value='$_POST[search]'/>";
+						echo "<input type='hidden' name='searchOPT' value='$_POST[searchOPT]'/>";
+						echo "<button type='submit' name='sort' value='$sort'>Sort</button>";
+					echo "</form>";
+				}
+				echo "</th>";
 		}
 		echo "</tr>";
 			
@@ -47,15 +76,30 @@
 		$pdo = new PDO($dsn, $username, $password);
 		$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 		
-		// get sql statement 
-		if ($_POST['searchOPT'] == "title")
+		// set order to print query
+		if (isset($_POST['sort']))
+			$order = "ORDER BY Title $_POST[sort]";
+		else $order = "";
+			
+		//check for empty search
+		if ($_POST['search'] == "")
+		{
+			$sql = "SELECT KaraokeFile.FileID, Title.Name'Title', Artist.Name'Artist', Version
+						FROM KaraokeFile, Title, Artist, Contributes, Contributor
+							WHERE KaraokeFile.TitleID = Title.TitleID
+							AND KaraokeFile.ArtistID = Artist.ArtistID
+							GROUP BY KaraokeFile.FileID
+							$order;";
+		}		
+		else if ($_POST['searchOPT'] == "title") // get sql statement
 		{
 			echo "Showing songs titled: $_POST[search]";
 			$sql = "SELECT FileID, Title.Name'Title', Artist.Name'Artist', Version
 						FROM KaraokeFile, Title, Artist
 						WHERE KaraokeFile.TitleID = Title.TitleID
 						AND KaraokeFile.ArtistID = Artist.ArtistID
-						AND Title.Name = '$_POST[search]';";
+						AND Title.Name = '$_POST[search]'
+						$order;";
 		}
 		else if ($_POST['searchOPT'] == "artist")
 		{
@@ -64,7 +108,8 @@
 						FROM KaraokeFile, Title, Artist
 						WHERE KaraokeFile.TitleID = Title.TitleID
 						AND KaraokeFile.ArtistID = Artist.ArtistID
-						AND Artist.Name = '$_POST[search]';";
+						AND Artist.Name = '$_POST[search]'
+						$order;";
 		}
 		else if ($_POST['searchOPT'] == "contributor")
 		{
@@ -75,7 +120,8 @@
 						AND KaraokeFile.ArtistID = Artist.ArtistID
 						AND KaraokeFile.FileID = Contributes.FileID 
 						AND Contributes.ConID = Contributor.ConID
-						AND Contributor.Name = '$_POST[search]';";
+						AND Contributor.Name = '$_POST[search]'
+						$order;";
 		}
 	
 		// run query
