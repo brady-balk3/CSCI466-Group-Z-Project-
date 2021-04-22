@@ -1,7 +1,6 @@
--- Group Z
--- Brady Balk, Joshua Bosse
--- Z1905404, Z1878186 
--- CSCI466
+-- Brady Balk, Joshua Bosse, Samuel Wells
+-- Z1905404, Z1878186, Z1860087
+-- CSCI466 Group Project Group Z
 
 -- Drop table statements to reset database after it has been ran
 DROP TABLE FQ;
