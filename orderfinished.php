@@ -38,7 +38,7 @@ echo "<html>";
 		$success = $prepared->execute(array(':Name' => $_POST['Name']));
 		
 		
-		$pquid = "SELECT UserID FROM User WHERE Name = ".$success.";";
+		$pquid = "SELECT MAX(UserID) FROM User;";
 		$result = $pdo->query($pquid);
 		$rs = $result->fetch(PDO::FETCH_BOTH);
 		
