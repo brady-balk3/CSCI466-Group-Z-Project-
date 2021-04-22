@@ -131,9 +131,15 @@
 		
 		//print results
 		if (empty($rows)) 
+		{
 			echo "<br>No results found";
+			echo "<br>Make sure to select one of the three options before conducting the search!";
+			echo "<br></br>";
+		}
 		else
+		{
 			table_print($rows);
+		}
 	}
 	catch(PDOexception $e) //handles error exception
 	{
