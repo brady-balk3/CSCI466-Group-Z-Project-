@@ -38,7 +38,8 @@
 			<input type="radio" id="contributor" name="searchOPT" value="contributor"/>
 			<label for="title">Contributor</label>
 			<p>Please select an option: Song Title, Artist, or Contributor before search!</p>
-			<p>A list of song data will be provided</p>
+			<p>Or a blank search will return all songs and their respective versions!</p>
+			<p>A list of song data will be provided below</p>
 			<p>Some songs may have more than one version, so pay attention!</p>
 			<input type="text" name="search" placeholder="Search for songs!">
 			<button type="submit">
