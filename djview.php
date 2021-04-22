@@ -22,7 +22,6 @@
 	// clear queue
 	if (isset($_POST['PQ']))
 	{
-		
 		$sql = "DELETE FROM PQ WHERE PQID = :PQID;";
 		$prepared = $pdo->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
 		$success = $prepared->execute(array(':PQID' => $_POST['PQ']));
